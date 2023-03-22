@@ -1,0 +1,69 @@
+C:\Users\ICT\Downloads\K-mer-Assembler>g++ main.cpp test.cpp sequence.cpp k-assembler.cpp kd-assembler.cpp EulerPath.cpp deBruijnByHash.cpp deBruijnByStringComp.cpp -o main
+
+C:\Users\ICT\Downloads\K-mer-Assembler>.\main
+-----------
+Testing k-assembler by k-mer pairwise comparison
+
+Example 0:
+Elapsed time for building de Bruijn graph: 0
+Passed test for existence of Eulerian path. Congratulations!
+Passed Test 1 Example 0 (assembled original sequence). Congratulations!
+
+Example 1:
+Elapsed time for building de Bruijn graph: 0
+Passed test for existence of Eulerian path. Congratulations!
+Passed Test 1 Example 1 (assembled original sequence). Congratulations!
+
+Example 2:
+Elapsed time for building de Bruijn graph: 0
+Passed test for existence of Eulerian path. Congratulations!
+Passed Test 1 Example 2 (assembled original sequence). Congratulations!
+
+Example 3:
+Elapsed time for building de Bruijn graph: 2.78
+Passed test for existence of Eulerian path. Congratulations!
+Passed Test 1 Example 3 (assembled original sequence). Congratulations!
+
+Passed Test 2 (assembled a sequence of the same composition with the original sequence). Congratulations!
+
+-----------
+Testing k-assembler by k-mer hashing
+
+Example 0:
+Elapsed time for building de Bruijn graph: 0
+Passed test for existence of Eulerian path. Congratulations!
+Passed Test 1 Example 0 (assembled original sequence). Congratulations!
+
+Example 1:
+Elapsed time for building de Bruijn graph: 0
+Passed test for existence of Eulerian path. Congratulations!
+Passed Test 1 Example 1 (assembled original sequence). Congratulations!
+
+Example 2:
+Elapsed time for building de Bruijn graph: 0
+Passed test for existence of Eulerian path. Congratulations!
+Passed Test 1 Example 2 (assembled a sequence of the same composition with the original sequence). Congratulations!
+
+Example 3:
+Elapsed time for building de Bruijn graph: 0.268
+Passed test for existence of Eulerian path. Congratulations!
+Passed Test 1 Example 3 (assembled original sequence). Congratulations!
+
+Passed Test 2 (assembled a sequence of the same composition with the original sequence). Congratulations!
+
+-----------
+Sequence: tgcggggagacccgt
+kmers:
+agac
+gaga
+gcgg
+gacc
+ggag
+accc
+ggga
+tgcg
+cccg
+cggg
+gggg
+ccgt
+Passed Test 3 (assembled original sequence). Congratulations!
