@@ -1,1 +1,1 @@
-# K-mer-Assembler
+# K-mer-Sequence-Assembler
