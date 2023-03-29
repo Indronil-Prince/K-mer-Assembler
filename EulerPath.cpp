@@ -101,7 +101,7 @@ list<size_t> find_Eulerian_path(DiGraph & g)
     list <size_t> path, cycle;
 
     size_t src = source(g);    // find the source node
-    size_t dest = sink(g);     // find the sink node
+    size_t dest = sink(g);     // find the sink nod e
 
     // In the special case graph with only cycles
     //   and no source nor sink, we choose node 0 as the

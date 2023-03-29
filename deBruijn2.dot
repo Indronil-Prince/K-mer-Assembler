@@ -1,0 +1,11 @@
+digraph for (K,d)-mer{
+label="de Bruijn graph"
+ag->gc[label=agc];---tt->ta[label=tta];
+gc->cc[label=gcc];---ta->aa[label=taa];
+cc->ct[label=cct];---aa->at[label=aat];
+ct->tt[label=ctt];---at->tt[label=att];
+aa->ag[label=aag];---tt->tt[label=ttt];
+aa->aa[label=aaa];---gc->cc[label=gcc];
+aa->aa[label=aaa];---cc->ct[label=cct];
+aa->aa[label=aaa];---ct->tt[label=ctt];
+}

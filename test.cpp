@@ -29,7 +29,7 @@ void test_and_print_message(const string & seq, const string & seq_truth,
         cout << "Passed " << message <<
             " (assembled a sequence of the same composition with the original sequence). Congratulations!" << endl;
     } else {
-        cerr << "FAILED test 1!" << endl;
+        cerr << "FAILED " + message + "!" << endl;
     }
 }
 
@@ -131,7 +131,6 @@ void test_3(const string & method)
     
     try {
         string seq = assemble_kmers(kmers, method, "deBruijn.dot");
-        //string seq2 = assemble_kdmers(kmers, 4, 2, "deBruijn2.dot");
         test_and_print_message(seq, seq_truth, k, "Test 3");
         
     } catch (char const * s) {
@@ -139,22 +138,21 @@ void test_3(const string & method)
     }
 }
 
-/*
+
 void test_4(const string& method)
 {
-    string seq_truth = random_DNA_sequence(15, 15);
-    size_t k = 4;
-    size_t d = 1;
+    string seq_truth = "aaaaagcctttaatt";
+    size_t k = 3;
+    size_t d = 2;
     cout << "Sequence: " << seq_truth << endl;
 
-    vector<string> kdmers = generate_kdmers(seq_truth, k, d);
+    vector<pair <string,string> > kdmers = get_kdmers(seq_truth, k, d);
     cout << "kdmers:" << endl;
     for (auto& kdmer : kdmers) {
-        cout << kdmer.substr(0,k) << "-" << kdmer.substr(k+d-1, k) << endl;
+        cout << kdmer.first << "-" << kdmer.second << endl;
     }
-
     try {
-        string seq2 = assemble_kdmers(kdmers, k, d, "deBruijn2.dot");
+        string seq2 = assemble_kdmers(kdmers, method, "deBruijn2.dot", k, d);
         test_and_print_message(seq2, seq_truth, k, "Test 4");
 
     }
@@ -162,7 +160,7 @@ void test_4(const string& method)
         cerr << s << endl;
     }
 }
-*/
+
 
 void test_seq_assembly()
 {
@@ -185,5 +183,6 @@ void test_seq_assembly()
     cout << "-----------" << endl;
 
     test_3("k-mer hashing");
-    //test_4("k-mer hashing");
+    cout << "-----------" << endl;
+    test_4("k-mer hashing");
 }
